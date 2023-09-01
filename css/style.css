@@ -107,6 +107,19 @@ img {
   margin-bottom: 40px;
   margin-left: -10px; }
 
+.link-active {
+  position: relative; }
+
+.link-active::before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: -10px;
+  z-index: -1; }
+
 #top {
   height: 1000px;
   text-align: center;
