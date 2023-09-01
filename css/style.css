@@ -258,4 +258,24 @@ img {
   line-height: 15rem;
   font-style: italic; }
 
+#pholosophy {
+  height: 1000px;
+  text-align: center;
+  padding-top: 500px; }
+
+#campany {
+  height: 1000px;
+  text-align: center;
+  padding-top: 500px; }
+
+#recruit {
+  height: 1000px;
+  text-align: center;
+  padding-top: 500px; }
+
+#contact {
+  height: 1000px;
+  text-align: center;
+  padding-top: 500px; }
+
 /*# sourceMappingURL=style.css.map */
