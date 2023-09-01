@@ -1,0 +1,35 @@
+@mixin section {
+    margin-bottom: 200px;
+    background-image: url('../img/slash.svg');
+    background-position: right bottom;
+    padding-bottom: 100px;
+}
+
+@mixin main-phrase {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 70px;
+}
+
+@mixin sub-phrase {
+    line-height: 200%;
+    font-weight: 300;
+}
+
+@mixin split-screen {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin text-area {
+    width: 48%;
+}
+
+@mixin image-area {
+    width: 48%;
+    padding-top: 15px;
+
+    img {
+        box-shadow: 0 0 25px 0 #fff;
+    }
+}

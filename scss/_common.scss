@@ -1,0 +1,128 @@
+@import 'mixin';
+
+html {
+    font-size: 100%;
+}
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    font-size: 2rem;
+    font-family: Avenir Next;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 999;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.header__nav-item {
+    margin-left: 45px;
+}
+
+.footer {
+    background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('../img/buildings.jpg');
+    background-size: cover;
+}
+
+.footer__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.footer__content {
+    @include split-screen;
+    padding: 200px 0 300px 0;
+}
+
+.footer__logo {
+    margin-bottom: 70px;
+}
+
+.footer__nav {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.footer__nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer__privacy-policy::after {
+    content: url("../img/target_blank.svg");
+    margin-left: 10px;
+}
+
+.footer__contact-title {
+    font-size: 7rem;
+    line-height: 7rem;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.footer__contact-button {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    border: solid #fff 1.5px;
+    border-radius: 5rem;
+}
+
+.footer__contact-text {
+    font-style: italic;
+    font-size: 3rem;
+    padding: 0 5rem;
+}
+
+.footer__contact-text::after {
+    content: url("../img/arrow.svg");
+    margin-left: 60px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: -10px;
+}
