@@ -1,8 +1,18 @@
 @import 'mixin';
 
-#about {.mainvisual {
-        padding-top: 300px;
-        @include section;
+body#about {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+}
+
+#about {
+    a {
+        color: #e1e1e1;
+    }
+
+    .mainvisual {
+        padding-top: 200px;
+        @include slash-section;
     }
 
     .mainvisual__main-phrase {
@@ -14,7 +24,7 @@
     }
 
     .business {
-        @include section;
+        @include slash-section;
         position: relative;
         background: radial-gradient( #767676 0%, #1e1e1e 70%);
         height: 1000px;
@@ -84,7 +94,7 @@
     }
 
     .reskilling {
-        @include section;
+        @include slash-section;
     }
 
     .reskilling__main-phrase {
@@ -108,7 +118,7 @@
     }
 
     .consulting {
-        @include section;
+        @include slash-section;
     }
 
     .consulting__main-phrase {
@@ -132,7 +142,7 @@
     }
 
     .training {
-        @include section;
+        @include slash-section;
     }
 
     .training__main-phrase {
@@ -153,24 +163,5 @@
 
     .training__image {
         @include image-area
-    }
-
-    .entry {
-        display: flex;
-        align-items: center;
-        height: 700px;
-        text-align: center;
-        background: linear-gradient(201deg, #1e1e1e 19.82%, #1e1e1e 78.86%, #F00 98.5%);
-    }
-
-    .entry__link {
-        display: block;
-        width: 100%;
-    }
-
-    .entry__section-title {
-        font-size: 7rem;
-        line-height: 15rem;
-        font-style: italic;
     }
 }

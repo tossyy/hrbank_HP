@@ -1,7 +1,71 @@
 @import 'mixin';
 
 #pholosophy {
-    height: 1000px;
-    text-align: center;
-    padding-top: 500px;
+    .top-message {
+        @include section;
+        padding-top: 200px;
+        margin-bottom: 0;
+    }
+
+    .top-message__main-phrase {
+        @include main-phrase;
+    }
+
+    .top-message__sub-phrase {
+        @include sub-phrase;
+        padding-bottom: 200px;
+    }
+
+    .pholosophy__title-number {
+        font-size: 7rem;
+        font-weight: bold;
+    }
+
+    .pholosophy__title-number::after {
+        content: '';
+        width: 300px;
+        border: solid #1e1e1e 1px;
+        transform: rotate(-45deg);
+        position: absolute;
+        margin-top: 150px;
+        margin-left: -100px;
+    }
+
+    .pholosophy__title {
+        @include main-phrase;
+        margin: 50px 0 50px 150px;
+    }
+
+    .pholosophy__sub-phrase {
+        @include sub-phrase;
+    }
+
+    .pholosophy__content {
+        @include split-screen;
+    }
+
+    .pholosophy__text {
+        width: 60%;
+    }
+
+    .first-message {
+        @include section;
+    }
+
+    .second-message {
+        @include section;
+    }
+
+    .third-message {
+        @include section;
+    }
+
+    .fourth-message {
+        @include section;
+    }
+
+    .fifth-message {
+        @include section;
+    }
+    
 }
