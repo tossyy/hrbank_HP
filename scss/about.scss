@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+@mixin section {
+    margin-bottom: 200px;
+    background-image: url('../img/slash.svg');
+    background-position: right bottom;
+    padding-bottom: 100px;
+}
+
+@mixin main-phrase {
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 70px;
+}
+
+@mixin sub-phrase {
+    line-height: 200%;
+    font-weight: 300;
+}
+
+@mixin split-screen {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin text-area {
+    width: 48%;
+}
+
+@mixin image-area {
+    width: 48%;
+    padding-top: 15px;
+
+    img {
+        box-shadow: 0 0 25px 0 #fff;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+body {
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    font-size: 2rem;
+    font-family: Avenir Next;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 999;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.header__nav-item {
+    margin-left: 45px;
+}
+
+.footer {
+    background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('../img/buildings.jpg');
+    background-size: cover;
+}
+
+.footer__inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.footer__content {
+    @include split-screen;
+    padding: 200px 0 300px 0;
+}
+
+.footer__logo {
+    margin-bottom: 70px;
+}
+
+.footer__nav {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.footer__nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer__privacy-policy::after {
+    content: url("../img/target_blank.svg");
+    margin-left: 10px;
+}
+
+.footer__contact-title {
+    font-size: 7rem;
+    line-height: 7rem;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.footer__contact-button {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    border: solid #fff 1.5px;
+    border-radius: 5rem;
+}
+
+.footer__contact-text {
+    font-style: italic;
+    font-size: 3rem;
+    padding: 0 5rem;
+}
+
+.footer__contact-text::after {
+    content: url("../img/arrow.svg");
+    margin-left: 60px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-left: -10px;
+}
+
+#about {
+    margin: 0 auto;
+
+    .mainvisual {
+        padding-top: 300px;
+        @include section;
+    }
+
+    .mainvisual__main-phrase {
+        @include main-phrase;
+    }
+
+    .mainvisual__sub-phrase {
+        @include sub-phrase;
+    }
+
+    .business {
+        @include section;
+        position: relative;
+        background: radial-gradient( #767676 0%, #1e1e1e 70%);
+        height: 1000px;
+    }
+
+    .business__circle-list {
+        position: relative;
+        height: 100%;
+    }
+
+    .business__circle-item {
+        position: absolute;
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        background: linear-gradient(164deg, #323232 0%, #767676 100%);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+
+        &:nth-of-type(1) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:nth-of-type(2) {
+            top: 600px;
+            transform: translateY(-50%);
+        }
+
+        &:nth-of-type(3) {
+            top: 600px;
+            left: 100%;
+            transform: translate3D(-100%, -50%, 0);
+        }
+    }
+
+    .business__back-circle {
+        position: absolute;
+        width: 1200px;
+        height: 500px;
+        border: solid #fff 1.5px;
+        border-radius: 50%;
+        transform: rotate(10deg);
+        top: 300px;
+        z-index: 1;
+    }
+
+    .business__title {
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .business__border {
+        width: 60%;
+        margin: 0 auto;
+        border: solid #fff 1.5px;
+        margin-bottom: 30px;
+    }
+
+    .business__detail {
+        width: 80%;
+        margin: 0 auto;
+        font-weight: 300;
+    }
+
+    .reskilling {
+        @include section;
+    }
+
+    .reskilling__main-phrase {
+        @include main-phrase;
+    }
+
+    .reskilling__content {
+        @include split-screen;
+    }
+
+    .reskilling__text {
+        @include text-area;
+    }
+
+    .reskilling__sub-phrase {
+        @include sub-phrase;
+    }
+
+    .reskilling__image {
+        @include image-area
+    }
+
+    .consulting {
+        @include section;
+    }
+
+    .consulting__main-phrase {
+        @include main-phrase;
+    }
+
+    .consulting__content {
+        @include split-screen;
+    }
+
+    .consulting__text {
+        @include text-area;
+    }
+
+    .consulting__sub-phrase {
+        @include sub-phrase;
+    }
+
+    .consulting__image {
+        @include image-area
+    }
+
+    .training {
+        @include section;
+    }
+
+    .training__main-phrase {
+        @include main-phrase;
+    }
+
+    .training__content {
+        @include split-screen;
+    }
+
+    .training__text {
+        @include text-area;
+    }
+
+    .training__sub-phrase {
+        @include sub-phrase;
+    }
+
+    .training__image {
+        @include image-area
+    }
+
+    .entry {
+        display: flex;
+        align-items: center;
+        height: 700px;
+        text-align: center;
+        background: linear-gradient(201deg, #1e1e1e 19.82%, #1e1e1e 78.86%, #F00 98.5%);
+    }
+
+    .entry__link {
+        display: block;
+        width: 100%;
+    }
+
+    .entry__section-title {
+        font-size: 7rem;
+        line-height: 15rem;
+        font-style: italic;
+    }
+}
