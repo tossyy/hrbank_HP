@@ -1,4 +1,54 @@
 @import 'mixin';
 
-#campany {
+#company {
+    .section-title {
+        @include main-phrase;
+    }
+
+    .company-profile {
+        @include section;
+        padding-top: 100px;
+    }
+
+    .company-profile__img {
+        width: 100%;
+    }
+
+    .company-profile__text {
+        padding: 0 60px;
+    }
+
+    .company-profile__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+
+        dt {
+            width: 35%;
+            border-bottom: solid 1px #1e1e1e;
+            padding: 50px 10px 10px 10px;
+        }
+
+        dd {
+            width: 60%;
+            border-bottom: solid 1px #cacaca;
+            padding: 50px 10px 10px 10px;
+        }
+    }
+
+    .office-address {
+        @include section;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .office-address__address{
+        margin-bottom: 50px;
+    }
+
+    .office-address__map-frame {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
 }
